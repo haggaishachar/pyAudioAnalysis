@@ -759,7 +759,7 @@ def dirWavFeatureExtraction(dirName, mtWin, mtStep, stWin, stStep, computeBEAT=F
                 MidTermFeatures = numpy.append(MidTermFeatures, beat)
                 MidTermFeatures = numpy.append(MidTermFeatures, beatConf)
             if len(allMtFeatures) == 0:                              # append feature vector
-                allMtFeatures = MidTermFeatures
+                allMtFeatures = numpy.array([MidTermFeatures])
             else:
                 allMtFeatures = numpy.vstack((allMtFeatures, MidTermFeatures))
             t2 = time.clock()
